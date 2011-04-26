@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "yuin chien") %></title>
+    <meta name="google-site-verification" content="OPghI5tQ4AyccyGB_x9kH1it1xUwmIBq2PQVckShDlU" />
+    <meta name="google-site-verification" content="oe6n5-QhjpYxq4wpvxvfx7YokyxYWn1dgUq5ZLaCMKI" />
+    
+    <%= stylesheet_link_tag 'public', :media => 'all' %>
+    
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <%= yield %>
+
+    <%= render 'layouts/google_analytics' %>
+  </body>
+</html>

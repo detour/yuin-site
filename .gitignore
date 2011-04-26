@@ -1,5 +1,4 @@
 config/database.yml
-config/deploy/*
 .DS_Store
 .DS_config
 public/system
