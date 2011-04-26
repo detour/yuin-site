@@ -1,0 +1,17 @@
+<div class="project">
+  <div class="project_header">
+    <div class="left_bar">
+      <span class="title"><%= project.title %></span>
+    </div>
+    <div class="right_bar">
+      <% unless project.location.blank? -%>
+      <span class="location">Location: <%=h project.location %></span>
+      <% end -%>
+      <span class="date"><%=h project.project_date.strftime('%m/%d/%Y') %></span>
+    </div>
+  </div>
+
+  <div class="project_content">
+    <div class="description"><%= project.description %></div>
+  </div>
+</div>

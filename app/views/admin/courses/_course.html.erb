@@ -1,0 +1,13 @@
+<div class="course_container" id="course_<%= course.id %>">
+  <div class="course">
+    <div class="handle left"><img src="/images/Icon_order.png" alt="[+]"></div>
+    <div class="name left"><%= course.name %></div>
+    <div class="right">
+      <%= link_to "Show", [:admin, course] %>
+      <%= link_to "Edit", edit_admin_course_path(course) %>
+      <%= link_to "Delete", [:admin, course], :confirm => 'Are you sure?', 
+                                               :method => :delete %>
+    </div>
+    <div class="clear_fix"></div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<% content_for :sidebar do -%>
+  <div class="tag_title">
+    <%= link_to '&nbsp;', home_path, :class => 'back_arrow' %>
+  </div>
+  <div class="tag"><span class='current'><%= @project.title %></div>
+<% end -%>
+
+<%= render_project_html(@project) %>

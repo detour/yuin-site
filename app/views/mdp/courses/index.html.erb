@@ -1,0 +1,17 @@
+<%- content_for :sidebar do -%>
+<div id="courses">
+  <%- for course in @courses -%>
+  <div class="course_container">
+    <span class="course"><%=h course.name %></span>
+    <div class="projects">
+      <%- for project in course.projects -%>
+      <div class="project"><%=link_to project.title, project_path(project), 
+                                                     :rel => project_path(project) %></div>
+      <%- end -%>
+    </div>
+  </div>
+  <%- end -%>
+</div>
+<%- end -%>
+
+

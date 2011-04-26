@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "yuin chien") %></title>
+    <meta name="google-site-verification" content="OPghI5tQ4AyccyGB_x9kH1it1xUwmIBq2PQVckShDlU" />
+    <meta name="google-site-verification" content="oe6n5-QhjpYxq4wpvxvfx7YokyxYWn1dgUq5ZLaCMKI" />
+    
+    <%= stylesheet_link_tag 'public', :media => 'all' %>
+    
+    <!--[if IE 6]>
+  	<link rel="stylesheet" href="/stylesheets/ie6.css" type="text/css" />
+    <![endif]-->
+    
+    <!--[if IE 7]>
+  	<link rel="stylesheet" href="/stylesheets/ie7.css" type="text/css" />
+    <![endif]-->
+    
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container_wrap">
+      <div id="container">
+        <%- if (params[:controller] == 'projects' and params[:action] == 'show') -%>
+        <div id="header">
+        <%- else -%>
+        <div id="header" style='height: 18px'>
+        <%- end -%>
+          <div id="main_menu">
+            <div id="logo" class="menu_item"><a href="<%= home_url %>">.yuin</a></div>
+            <% (params[:controller] == 'projects' or params[:controller] == 'categories') ? portfolio_class = 'current' : portfolio_class = '' %>
+            <div class="menu_item"><%= link_to "/&nbsp;portfolio", projects_path, :class => portfolio_class %></div>
+            <% (params[:controller] == 'home' and params[:action] == 'resume') ? classes = 'current' : classes = '' %>
+            <div class="menu_item"><%= link_to "/&nbsp;resume", resume_path, :class => classes %></div>
+            <% (params[:controller] == 'home' and params[:action] == 'contact') ? classes = 'current' : classes = '' %>
+            <div class="menu_item"><%= link_to "/&nbsp;contact", contact_path, :class => classes %></div>
+            <div class="clear_fix"></div>
+          </div>
+        </div>
+        <% if yield(:sidebar) -%>
+        <div id="left_column">
+          <div id="sidebar">
+            <%= yield(:sidebar) %>
+          </div>
+        </div>
+        <% end -%>
+        <% if yield(:sidebar) -%>
+        <div id="right_column">
+        <% else -%>
+        <div id="main_view_container">
+        <% end -%>
+          <div id="main_view">
+            <%= yield %>
+          </div>
+        </div>
+        <div class="clear_fix"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <%= javascript_include_tag "application", :cache => true %>
+    <%= javascript_include_tag 'swfobject' %>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18616613-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>

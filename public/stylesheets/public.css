@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  /*line-height: 1.1em;*/
+  font-family: "Archer-Medium", "Archer-Semibold", serif;
+  color: #3c3c3c;
+}
+
+a {
+  color: #3c3c3c;
+  text-decoration:none;
+}
+a:hover {
+  color: #3c3c3c;
+}
+
+/* Fonts
+--------------- */
+@font-face {
+  font-family: "Archer-Book";
+  src: url(/fonts/Archer-Book-Pro.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Archer-Medium";
+  src: url(/fonts/Archer-Medium-Pro.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Archer-Semibold";
+  src: url(/fonts/Archer-Semibold-Pro.otf) format("opentype");
+}
+
+/* Structure
+--------------- */
+#container_wrap {
+}
+  #container {
+    margin: 0 0 0 20px;
+    padding: 20px 0 60px;
+    width: 900px;
+    text-align: left;
+    position: relative;
+  }
+
+#left_column {
+  width: 178px;
+  float: left;
+  position: fixed;
+  top: 125px;
+}
+
+#right_column {
+  width: 600px;
+  float: left;
+  position: absolute;
+  top: 125px;
+  left: 178px;
+}
+
+#main_column {
+  position: absolute;
+  top: 95px;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  width: 900px;
+  height: 110px;
+  background-color: #fff;
+  z-index: 5;
+  padding: 15px 0 0;
+}
+
+#main_view_container {
+  position: absolute;
+  top: 30px;
+  width: 900px;
+}
+
+/* Logo
+--------------- */
+#main_menu #logo {
+  margin: 0 0 20px 0;
+  width: 180px;
+}
+  #main_menu #logo a {
+    text-decoration: none;
+    border: none;
+    font-size: 13px;
+    font-weight: normal;
+    color: #ec008c;
+  }
+  #main_menu #logo img {
+    border: none;
+  }
+
+/* Sidebar
+--------------- */
+#sidebar {
+  line-height: 1.1em;
+  margin: -3px 0 0 1px;
+}
+
+#sidebar .intro {
+  color: #ac7a2a;
+  font-size: 16px;
+  line-height: 22px;
+  width: 180px;
+  margin: 0 0 20px 0;
+}
+#sidebar .contact_items {
+  margin: 0 0 25px 0;
+}
+  #sidebar .contact_item {
+    margin: 0 0 5px 0;
+  }
+
+#sidebar .tag_title {
+  color: #3c3c3c;
+  font-size: 15px;
+  margin: 0 0 0 -6px;
+  display: inline-block;
+  float: left;
+}
+#sidebar .tag {
+  margin: 3px 0 8px 2px;
+  display: inline-block;
+  float: left;
+}
+#sidebar .tag a, #sidebar .tag span {
+  border: none;
+  color: #3c3c3c;
+  font-family: "Archer-Book";
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 18px;
+  opacity: 0.5;
+  filter:alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+}
+#sidebar .tag a:hover, #sidebar .tag a.current, #sidebar .tag span.current {
+  opacity: 1.0;
+  filter:alpha(opacity=100);
+	-moz-opacity: 1.0;
+	-khtml-opacity: 1.0;
+}
+
+#sidebar .sub_category {
+  margin: 0 0 10px 0;
+}
+  #sidebar .sub_category a {
+    border: none;
+  }
+  #sidebar .sub_category a.current {
+    color: #ac7a2a;
+  }
+  #sidebar .sub_category .projects {
+    margin: 0;
+  }
+    #sidebar .sub_category .projects a {
+      font-size: 10px;
+    }
+
+/* Main Menu
+--------------- */
+
+#main_menu {
+  margin: 0;
+  height: 100%;
+}
+  #main_menu a {
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+    color: #ccc;
+  }
+  #main_menu a:hover {
+    color: #3c3c3c;
+  }
+  #main_menu a.current {
+    color: #3c3c3c;
+  }
+  
+  #main_menu .menu_item {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+
+/* Portfolio
+--------------- */
+#categories {
+  margin: 0 0 10px 0;
+  padding-left: 4px;
+  float: right;
+  width: 170px;
+  height: 90px;
+}
+ #categories .category a {
+   color: #3c3c3c;
+   padding: 0 10px;
+   font-size: 12px;
+   line-height: 17px;
+   display: block;
+   opacity: 0.5;
+   filter:alpha(opacity=50);
+ 	-moz-opacity: 0.5;
+ 	-khtml-opacity: 0.5;
+ }
+ #categories .category a:hover, #categories .category a.current {
+   opacity: 1.0;
+   filter:alpha(opacity=100);
+ 	-moz-opacity: 1.0;
+ 	-khtml-opacity: 1.0;
+ }
+ 
+#projects {
+  clear: both;
+}
+  #projects .project {
+    float: left;
+    margin: 0 10px 10px 0;
+    height: 110px;
+  }
+  #projects .project a {
+    display: block;
+    float: left;
+    position: relative;
+    width: 170px;
+    height: 110px;
+  }
+  #projects .project img {
+    border: none;
+  }
+  #projects .project a:hover .title, #projects .project a:hover .alternative_title {
+    display: block;
+  }
+  #projects .project .title {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: url(/images/bk_white.png);
+    color: #3c3c3c;
+    width: 160px;
+    padding: 0 5px;
+    height: 110px;
+    line-height: 22px;
+    font-family: "Archer-Semibold", serif;
+    font-size: 19px;
+    vertical-align: bottom;
+  }
+  #projects .project .alternative_title {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: url(/images/bk_black.png);
+    color: #fff;
+    width: 160px;
+    padding: 0 5px;
+    height: 110px;
+    line-height: 22px;
+    font-family: "Archer-Semibold", serif;
+    font-size: 19px;
+  }
+  #projects .project .inner_title {
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+  }
+  #projects .disable {
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+  	-moz-opacity: 0.6;
+  	-khtml-opacity: 0.6;
+  }
+
+
+/* Project
+--------------- */
+a.back_arrow {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 0 0 0;
+  background: url(/images/arrow.png) no-repeat;
+}
+a.back_arrow img {
+  border: none;
+}
+ 
+.project_header {
+  height: 19px;
+  line-height: 19px;
+  width: 100%;
+  position: relative;
+  margin: 0 0 18px 0;
+  display: none;
+}
+  .project_header .left_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .project_header .right_bar {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+  }
+  .project_header .title {
+    color: #3c3c3c;
+    display: block;
+    float: left;
+    font-size: 15px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 15px 0 0;
+  }
+  .project_header .show_chinese {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 0px;
+    color: #fff;
+    background: url(/images/chinese.gif) no-repeat;
+    margin: 2px 0 0;
+    cursor: pointer;
+  }
+  
+  .project_header .location {
+    font-size: 11px;
+    color: #999;
+    margin: 0 10px 0;
+  }
+  .project_header .time {
+    font-size: 11px;
+    color: #999;
+    margin: 0 3px 0 0;
+  }
+  .project_header .date {
+    font-size: 11px;
+    color: #999;
+  }
+
+.project_content {
+  margin: 0 0 30px 0;
+}
+  .project_content .sub_text {
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 10px 0;
+  }
+  .project_content .description {
+    font-family: "Archer-Book";
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+  }
+    .project_content .description img {
+      border: 1px solid #e5e5e5;
+      padding: 0px;
+      margin: 0 0 0 0px;
+      width: 598px;
+    }
+  .project_content .chinese_description {
+    display: none;
+  }
+  
+.project_image {
+  margin: 0 0 5px 0;
+}
+
+/* Course 
+--------------- */
+#courses .projects {
+  display: none;
+  margin: 3px 0 0 10px;
+}
+
+#courses .expanded .projects {
+  display: block;
+}
+
+.course_container {
+  margin: 0 0 10px 0;
+}
+  .course_container .project a {
+    color: #ccc;
+  }
+  .course_container .project a:hover, .course_container .project a.current {
+    color: #3c3c3c;
+  }
+  
+.course {
+  cursor: pointer;
+}
+
+/* Misc 
+--------------- */
+
+.notice {
+  font-size: 20px;
+  color: #ac7a2a;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear_fix {
+  clear: both;
+}

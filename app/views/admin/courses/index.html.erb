@@ -1,0 +1,25 @@
+<% title "Courses" %>
+
+<% if Course.all.blank? %>
+<div>Please add a <%= link_to "New Course", new_admin_course_path %></div>
+
+<% else -%>
+<div class="">
+  <div id="courses" class="list">
+  <%- for course in Course.all -%>
+  <%= render_course_html(course) %>
+  <%- end -%>
+  <div class="clear_fix"></div>
+  </div>
+</div>
+<%= sortable_element("courses", :url => sort_admin_courses_path ) %>
+<p><%= link_to "Add a New Course", new_admin_course_path %></p>
+<% end -%>
+
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $('.list').bind('mousedown', function(e) {
+      e.stopPropagation();
+    });
+  })
+</script>

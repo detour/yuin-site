@@ -1,0 +1,25 @@
+<div id="categories">
+  <%- for category in Category.public_roots -%>
+  <% @category and @category.root == category ? classes = "current" : classes = '' -%>
+  <span class="category"><%= link_to "_#{category.name}", category_path(category), :class => classes, :rel => category.id %></span>
+  <%- end -%>
+</div>
+
+<div id="projects">
+  <% for project in @projects -%>
+  <% @category.projects.include?(project) ? project_class = '' : project_class = 'disable' %>
+  
+  <% project_classes = '' -%>
+  <% for category in project.categories -%>
+    <% project_classes += "project_cate#{category.id} " -%>
+  <% end -%>
+  <div class="project <%= project_class %>">
+    <a href="<%= project_path(project) %>" class="project_cate <%= project_classes %>">
+      <%= image_tag project.photos.first.data.url(:thumb) unless project.photos.blank? %>
+      <% project.alternative_title ? title_class = "alternative_title" : title_class = 'title' -%>
+      <div class="<%= title_class %>"><span class="inner_title"><%= project.home_title %></span></div>
+    </a>
+  </div>
+  <% end -%>
+  <div class="clear_fix"></div>
+</div>

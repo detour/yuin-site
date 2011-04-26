@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "yuin chien - mdp") %></title>
+    <%= stylesheet_link_tag 'mdp', :media => 'all' %>
+    
+    <!--[if IE 6]>
+  	<link rel="stylesheet" href="/stylesheets/ie6.css" type="text/css" />
+    <![endif]-->
+    
+    <!--[if IE 7]>
+  	<link rel="stylesheet" href="/stylesheets/ie7.css" type="text/css" />
+    <![endif]-->
+    
+    <%= yield(:head) %>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <%= javascript_include_tag "jquery.address", :cache => true %>
+    <%= javascript_include_tag "mdp", :cache => true %>
+  </head>
+  <body class='home_body'>
+    <div id="container_wrap">
+      <div id="container">
+        <div id="header">
+          <div id="main_menu">
+            <div id="logo" class="menu_item"><a href="<%= mdp_home_url %>">.yuin</a></div>
+            <div class="menu_item"><%= link_to "/&nbsp;C2", mdp_home_url, :class => 'current' %></div>
+            <div class="menu_item"><%= link_to "/&nbsp;C1", 'http://yuinchien.com/mdp', :target => '_blank' %></div>
+            <div class="menu_item"><%= link_to "/&nbsp;M2", 'http://yuinchien.com/mdp', :target => '_blank' %></div>
+            <div class="menu_item"><%= link_to "/&nbsp;M1", 'http://yuinchien.com/mdp', :target => '_blank' %></div>
+            <div class="menu_item"><%= link_to "/&nbsp;THESIS", 'http://people.artcenter.edu/~tchien/thesis', :target => '_blank' %></div>
+            <div class="clear_fix"></div>
+          </div>
+        </div>
+        <% if yield(:sidebar) -%>
+        <div id="left_column">
+          <div id="sidebar">
+            <%= yield(:sidebar) %>
+          </div>
+        </div>
+        <% end -%>
+        <% if yield(:sidebar) -%>
+        <div id="right_column">
+        <% else -%>
+        <div id="main_view_container">
+        <% end -%>
+          <div id="main_view">
+            <%= yield %>
+          </div>
+        </div>
+        <div class="clear_fix"></div>
+      </div>
+    </div>
+  </body>
+</html>

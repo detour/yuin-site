@@ -1,0 +1,18 @@
+<div class="edit_form_container">
+<div class="note">* indicates required fields</div>
+
+<% form_for [:admin, @course], :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <div class="form_row">
+    <%= f.label :name, '* Name' %>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="form_row">
+    <%= f.label :term, '* Term' %>
+    <%= f.text_field :term %>
+  </div>
+  
+  <div class="form_row"><%= f.submit "Submit" %></div>
+<%- end -%>
+</div>
