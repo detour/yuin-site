@@ -1,0 +1,301 @@
+@font-face { 
+  font-family: Simple;
+  font-weight: normal;
+  src: url('../font/Simple/SimplReg.ttf'); 
+}
+@font-face { 
+  font-family: Simple;
+  font-weight: bold;
+  src: url('../font/Simple/SimplBol.ttf'); 
+}
+@font-face { 
+  font-family: Simple;
+  font-style: oblique;
+  font-weight: bold;
+  src: url('../font/Simple/SimplBolObl.ttf'); 
+}
+@font-face { 
+  font-family: Simple;
+  font-style: oblique;
+  font-weight: normal;
+  src: url('../font/Simple/SimplObl.ttf'); 
+}
+
+@font-face { 
+  font-family: TradeGothic;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('../font/TradeGot.ttf'); 
+}
+
+@font-face { 
+  font-family: TradeGothic;
+  font-weight: bold;
+  src: url('../font/TradeGotBolObl.ttf');
+}
+
+@font-face { 
+  font-family: TradeGothicCon;
+  font-weight: bold;
+  src: url('../font/TradeGotBolConTweObl.ttf'); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Simple', arial, serif;
+  font-size: 15px;
+  text-align: left;
+  color: #666;
+}
+
+a {
+  color: #666666;
+  text-decoration: none;
+}
+a:hover { color: #000000; }
+
+img {
+/*  border: 1px solid #ccc;*/
+}
+
+#main {
+  width:800px;
+	text-align:left;
+	margin:auto;
+	padding:50px;
+	height:100%;
+}
+
+
+
+/*
+  MENU
+*/
+
+#menu {
+  width: 220px;
+  float:left;
+  text-align: left;
+  z-index: 10;
+}
+
+#menu #title {
+  font-size:18px;
+  font-weight: bold;
+/*  font-style: oblique;*/
+  margin-bottom: 26px;
+}
+#menu .item {
+  font-size:13px;
+  margin-bottom: 8px;
+  z-index: 10;
+}
+#menu .item a .hover{
+  background-color: #ff0000;
+  margin-bottom: 2px;
+}
+#menu #missions #mission_title{
+  margin-bottom: 4px;
+}
+
+#menu #missions .name {
+  padding: 4px 0 0 0;
+}
+
+
+/* 
+  CONTENT
+*/
+#content {
+  font-family: "TradeGothic";
+  width: 550px;
+  float:left;
+  padding-bottom: 80px;
+
+}
+#content a {
+  text-decoration: underline;
+}
+#content img {
+  width: 550px;
+  margin-left: 3px;
+  border: 1px solid rgba(120,120,120,0.2);
+}
+#content #title {
+  font-family: 'Simple', 'Courier New';
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 26px;
+  line-height: inherit;
+  padding: 0 0 0 14px;
+}
+#content .question {
+  font-family: 'Simple', 'Courier New';
+  font-size: 14px;
+  font-style: oblique;
+  margin-bottom: 10px;
+  line-height: 22px;
+/*  color: #14F781;*/
+}
+#content .desc {
+  margin-top: -3px;
+  font-size: 14px;
+  position: relative;
+}
+.desc_title {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: 'Simple', 'Courier New';
+}
+#content div{
+  margin-bottom: 20px;
+  line-height: 22px;
+}
+
+/*
+  LINES
+*/
+#content .lines {
+  font-size:11px;
+  font-family: 'Courier New';
+  position: absolute;
+/*  top: 37px;*/
+  color: #0000ff;
+}
+#content .lines .hor{
+  margin-bottom: 0px;
+  line-height: 9px;
+}
+#content .lines .ver{
+  margin-bottom: 0px;
+  line-height: 10px;
+}
+
+
+/*
+  INDEX
+*/
+#blurb {
+  margin-top: 0px;
+}
+#blurb #text {
+  font-family: Simple;
+  font-style: oblique;
+  line-height: 19px;
+  font-size: 13px;
+}
+
+/*
+  METHDOLOGY
+*/
+
+
+
+/*
+  PROJECT
+*/
+
+
+
+/*
+  PROXIMITIES
+*/
+#content .proximity {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 27px;
+/*  padding: 0px 10px 10px 0;*/
+}
+.proximity_content {
+  padding: 0 0 0 15px;
+}
+#content .proximity_content div.list {
+  line-height: 13px;
+}
+#content .proximity_content img {
+  width: inherit;
+}
+.desc div {
+/*  margin-top: 10px;*/
+}
+
+#projects {
+	float:left;
+	margin-left:4px;
+}
+#projects #title {
+  font-family: 'TradeGothic';
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 26px;
+  line-height: inherit;
+}
+
+.project {
+	margin: 0 0 6px 0;
+  width: 550px;
+	height: 70px;
+  position: relative;
+}
+  #content .project img {
+    width: inherit; 
+    border:none;
+  }
+	.project a{
+	  text-decoration: none;
+	}
+	.project .title{
+		position: absolute;
+		left: 170px;
+		top:27px;
+		font-size: 13px;
+		width: 200px;
+		color: #999;
+		font-family: 'Simple';
+		font-weight: bold;
+	}
+	.project .imgContainer {
+	  margin-left: 90px;
+	}
+	.project .imgColor {
+		position: absolute;
+		top: 0px;
+		left: 100px;
+		display: none;
+	}
+	.project .imgGray {
+		position: absolute;
+		top:  0px;
+		left: 100px;
+	}
+
+
+
+
+/*
+  SEARCH
+*/
+#story {
+  
+}
+#story #story_title {
+  margin-top: 20px;
+  font-weight: bold;
+}
+#story .role {
+  margin-bottom: 0px;
+}
+#review_articles .link {
+  text-decoration: none;
+}
+
+
+
+.right {
+  float: right;
+}
+

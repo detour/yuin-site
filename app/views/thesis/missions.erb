@@ -1,0 +1,73 @@
+<div class="lines"  style="top:37px;">
+	<div class="hor">+------------------------------------------------------------------------------+</div>
+	<div class="ver">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<div class="ver">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<div class="hor">+------------------------------------------------------------------------------+</div>
+</div>
+
+<div id="title">MISSIONS</div>
+
+<div class="project" >
+	<div class="lines" style="top:32px;left:158px;">
+		<div class="ver">+</div>
+	</div>
+	<a href="monster.html">
+		<div class="imgContainer" style="margin-left:0px;">
+			<img class="imgGray" style="left:-84px;" src="/images/thesis/monster_bw.png" />
+			<img class="imgColor" style="left:-84px;" src="/images/thesis/monster.png" />
+		</div>
+		<div class="title">PIXEL MONSTER</div>
+	</a>
+</div>
+
+<div class="project">
+	
+	<div class="lines" style="top:32px;left:158px;">
+		<div class="ver">+</div>
+	</div>
+	
+	<a href="magnet.html">
+		<div class="imgContainer" >
+			<img class="imgGray" style="left:-82px;z-index:-3;" src="/images/thesis/magnet_bw.png" />
+			<img class="imgColor" style="left:-82px;z-index:-3;" src="/images/thesis/magnet.png" />
+		</div>	
+		<div class="title">ANTI-LIKE MAGNET</div>
+	</a>
+</div>
+
+<div class="project">
+	
+	<div class="lines" style="top:32px;left:158px;">
+		<div class="ver">+</div>
+	</div>
+	
+	<a href="search.html">
+		<div class="imgContainer">
+			<img class="imgGray" style="left:-65px;top:3px;" src="/images/thesis/operators_bw.png" />
+			<img class="imgColor" style="left:-65px;top:3px;" src="/images/thesis/operators.png" />
+		</div>
+		<div class="title">THE SEARCH OPERATORS</div>
+	</a>
+</div>
+
+<% content_for :foot do %>
+<script type="text/javascript" language="javascript">
+	$(document).ready(function() {
+			$('.project').each(function(){
+				$(this).mouseenter(function() {
+					console.log('in');
+					var imgColor = $(this).find('.imgColor');
+					var imgGray = $(this).find('.imgGray');
+					imgColor.fadeIn(150);
+					$(this).find('.title').css('color','#333');
+				});
+				$(this).mouseleave(function() {
+					var imgColor = $(this).find('.imgColor');
+					var imgGray = $(this).find('.imgGray');
+					imgColor.fadeOut(150);
+					$(this).find('.title').css('color','#999');
+				});
+			});
+		});
+</script>
+<% end %>

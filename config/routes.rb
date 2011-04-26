@@ -30,7 +30,15 @@ ActionController::Routing::Routes.draw do |map|
   
   map.mdp_home '/mdp', :controller => 'mdp/courses', :action => 'index'
   
-  map.thesis 'thesis', :controller => 'thesis', :action => 'index'
+  map.thesis 'thesis/index', :controller => 'thesis', :action => 'index'
+  map.thesis_about 'thesis/about', :controller => 'thesis', :action => 'about'
+  map.thesis_methodology 'thesis/methodology', :controller => 'thesis', :action => 'methodology'
+  map.thesis_proximities 'thesis/proximities', :controller => 'thesis', :action => 'proximities'
+  map.thesis_missions 'thesis/missions', :controller => 'thesis', :action => 'missions'
+  map.thesis_monster 'thesis/monster', :controller => 'thesis', :action => 'monster'
+  map.thesis_magnet 'thesis/magnet', :controller => 'thesis', :action => 'magnet'
+  map.thesis_search 'thesis/search', :controller => 'thesis', :action => 'search'
+  
   
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"

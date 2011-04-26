@@ -2,17 +2,40 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title><%= h(yield(:title) || "yuin chien") %></title>
+    <title><%= h(yield(:title) || "HIJACKERS") %></title>
     <meta name="google-site-verification" content="OPghI5tQ4AyccyGB_x9kH1it1xUwmIBq2PQVckShDlU" />
     <meta name="google-site-verification" content="oe6n5-QhjpYxq4wpvxvfx7YokyxYWn1dgUq5ZLaCMKI" />
     
-    <%= stylesheet_link_tag 'public', :media => 'all' %>
+    <%= stylesheet_link_tag 'thesis', :media => 'all' %>
     
     <%= yield(:head) %>
   </head>
   <body>
-    <%= yield %>
+	
+		<div id="main">
+			<div id="menu">
+				<div id="title"><%=link_to 'HIJACKERS', thesis_path %></div>
+				<div class="item"><%=link_to 'ABOUT', thesis_about_path %></div>
+				<div class="item"><%=link_to 'METHODOLOGY', thesis_methodology_path %></div>
+				<div class="item"><%=link_to 'PROXIMITIES', thesis_proximities_path %></div>
+				<div class="item" id="missions">
+					<div id="mission_title"><%=link_to 'MISSIONS', thesis_missions_path %></div>
+					<div class="name"><%=link_to '-> PIXEL MONSTER', thesis_monster_path %></div>
+					<div class="name"><%=link_to '-> ANTI-LIKE MAGNET', thesis_magnet_path %></div>
+					<div class="name"><%=link_to '-> THE SEARCH OPERATORS', thesis_search_path %></div>
+				</div>
+			</div>
+			
+			<div id="content">
+				
+    		<%= yield %>
 
+			</div>
+		</div>
+
+		<%= javascript_include_tag 'jquery', 'thesis' %>
+		<%= yield(:foot) %>
+		
     <%= render 'layouts/google_analytics' %>
   </body>
 </html>
