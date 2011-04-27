@@ -188,7 +188,15 @@ img {
   line-height: 19px;
   font-size: 13px;
 }
-
+#author {
+  margin-top: 130px;
+  font-family: Simple;
+  font-size: 13px;
+}
+#author div{
+  line-height: 18px;
+  margin-bottom: 0px;
+}
 /*
   METHDOLOGY
 */

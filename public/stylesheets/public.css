@@ -8,7 +8,8 @@ body {
   padding: 0;
   font-size: 12px;
   /*line-height: 1.1em;*/
-  font-family: "Archer-Medium", "Archer-Semibold", serif;
+  font-family: 'Inconsolata', arial, serif;
+/*  font-family: "Archer-Medium", "Archer-Semibold", serif;*/
   color: #3c3c3c;
 }
 
@@ -52,7 +53,7 @@ a:hover {
 #left_column {
   width: 178px;
   float: left;
-  position: fixed;
+  position: fixed;c
   top: 125px;
 }
 
@@ -138,7 +139,7 @@ a:hover {
 #sidebar .tag a, #sidebar .tag span {
   border: none;
   color: #3c3c3c;
-  font-family: "Archer-Book";
+/*  font-family: "Archer-Book";*/
   font-size: 15px;
   font-weight: normal;
   line-height: 18px;
@@ -192,7 +193,7 @@ a:hover {
   
   #main_menu .menu_item {
     float: left;
-    margin: 0 20px 0 0;
+    margin: 0 31px 0 0;
   }
 
 /* Portfolio
@@ -248,29 +249,33 @@ a:hover {
     position: absolute;
     left: 0;
     bottom: 0px;
-    background: url(/images/bk_white.png);
-    color: #3c3c3c;
+/*    background: url(/images/bk_black.png);*/
+    color: #666;
+    background-color: rgba(255,255,255,0.97);
     width: 160px;
     padding: 0 5px;
     height: 110px;
-    line-height: 22px;
-    font-family: "Archer-Semibold", serif;
-    font-size: 19px;
-    vertical-align: bottom;
+    line-height: 17px;
+/*    font-family: "Archer-Semibold", serif;*/
+    font-size: 17px;
+    
+    
   }
+
   #projects .project .alternative_title {
     display: none;
     position: absolute;
     left: 0;
     bottom: 0px;
-    background: url(/images/bk_black.png);
-    color: #fff;
+/*    background: url(/images/bk_black.png);*/
+    color: #666;
+    background-color: rgba(255,255,255,0.97);
     width: 160px;
     padding: 0 5px;
     height: 110px;
-    line-height: 22px;
-    font-family: "Archer-Semibold", serif;
-    font-size: 19px;
+    line-height: 17px;
+/*    font-family: "Archer-Semibold", serif;*/
+    font-size: 17px;
   }
   #projects .project .inner_title {
     position: absolute;
@@ -362,8 +367,10 @@ a.back_arrow img {
     margin: 0 0 10px 0;
   }
   .project_content .description {
-    font-family: "Archer-Book";
-    font-size: 15px;
+/*    font-family: "Archer-Book";*/
+/*    font-family: 'Georgia';*/
+  
+    font-size: 13px;
     line-height: 18px;
     margin: 0 0 20px 0;
   }
