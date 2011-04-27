@@ -30,7 +30,7 @@
           <div id="main_menu">
             <div id="logo" class="menu_item"><a href="<%= home_url %>">.yuin</a></div>
             <% (params[:controller] == 'thesis') ? classes = 'current' : classes = '' %>
-            <div class="menu_item"><%= link_to "/&nbsp;thesis", thesis_path, :class => classes %></div>
+            <div class="menu_item"><%= link_to "/&nbsp;thesis", thesis_path, :class => classes, :target => '_blank' %></div>
             <% (params[:controller] == 'projects' or params[:controller] == 'categories') ? portfolio_class = 'current' : portfolio_class = '' %>
             <div class="menu_item"><%= link_to "/&nbsp;portfolio", projects_path, :class => portfolio_class %></div>
             <% (params[:controller] == 'home' and params[:action] == 'resume') ? classes = 'current' : classes = '' %>

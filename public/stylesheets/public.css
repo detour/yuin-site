@@ -249,17 +249,13 @@ a:hover {
     position: absolute;
     left: 0;
     bottom: 0px;
-/*    background: url(/images/bk_black.png);*/
-    color: #666;
+    color: #3C3C3C;
     background-color: rgba(255,255,255,0.97);
     width: 160px;
     padding: 0 5px;
     height: 110px;
-    line-height: 17px;
-/*    font-family: "Archer-Semibold", serif;*/
-    font-size: 17px;
-    
-    
+    line-height: 16px;
+    font-size: 15px;
   }
 
   #projects .project .alternative_title {
@@ -268,14 +264,13 @@ a:hover {
     left: 0;
     bottom: 0px;
 /*    background: url(/images/bk_black.png);*/
-    color: #666;
+    color: #3C3C3C;
     background-color: rgba(255,255,255,0.97);
     width: 160px;
     padding: 0 5px;
     height: 110px;
-    line-height: 17px;
-/*    font-family: "Archer-Semibold", serif;*/
-    font-size: 17px;
+    line-height: 16px;
+    font-size: 15px;
   }
   #projects .project .inner_title {
     position: absolute;
