@@ -53,8 +53,10 @@ a:hover {
 #left_column {
   width: 178px;
   float: left;
-  position: fixed;c
+  position: fixed;
   top: 125px;
+  z-index: 10;
+
 }
 
 #right_column {
@@ -140,7 +142,7 @@ a:hover {
   border: none;
   color: #3c3c3c;
 /*  font-family: "Archer-Book";*/
-  font-size: 15px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 18px;
   opacity: 0.5;

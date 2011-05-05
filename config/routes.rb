@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   map.thesis_about 'thesis/about', :controller => 'thesis', :action => 'about'
   map.thesis_methodology 'thesis/methodology', :controller => 'thesis', :action => 'methodology'
   map.thesis_proximities 'thesis/proximities', :controller => 'thesis', :action => 'proximities'
+  map.thesis_exhibition 'thesis/exhibition', :controller => 'thesis', :action => 'exhibition'
   map.thesis_missions 'thesis/missions', :controller => 'thesis', :action => 'missions'
   map.thesis_monster 'thesis/monster', :controller => 'thesis', :action => 'monster'
   map.thesis_magnet 'thesis/magnet', :controller => 'thesis', :action => 'magnet'
