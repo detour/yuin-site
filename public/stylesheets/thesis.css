@@ -62,10 +62,10 @@ img {
 }
 
 #main {
-  width:800px;
+  width:1000px;
 	text-align:left;
-	margin:auto;
-	padding:50px;
+/*  margin:auto;*/
+	padding: 26px 50px 50px 50px;
 	height:100%;
 }
 
@@ -76,61 +76,71 @@ img {
 */
 
 #menu {
-  width: 220px;
-  float:left;
   text-align: left;
   z-index: 10;
+  height: 30px;
+  width: 900px;
+  background-color: rgba(255,255,255,0.98);
+  position: fixed;
+  padding:7px 10px 0 7px;
 }
 
 #menu #title {
-  font-size:18px;
+  font-size:14px;
   font-weight: bold;
-/*  font-style: oblique;*/
-  margin-bottom: 26px;
+  margin: 0 30px 26px 0;
+  float: left;
 }
 #menu .item {
-  font-size:13px;
+/*  font-style: oblique;*/
+  font-size:14px;
   margin-bottom: 8px;
   z-index: 10;
+  float: left;
+  margin-left: 40px;
 }
 #menu .item a .hover{
   background-color: #ff0000;
   margin-bottom: 2px;
 }
 #menu #missions #mission_title{
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 #menu #missions .name {
-  padding: 4px 0 0 0;
+  padding: 2px 0 0 0;
 }
 
+#menu #mission_panel {
+  display: none;
+}
 
 /* 
   CONTENT
 */
 #content {
   font-family: "TradeGothic";
-  width: 550px;
-  float:left;
-  padding-bottom: 80px;
-
+  width: 1200px;
+/*  float:left;*/
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
 #content a {
   text-decoration: underline;
 }
 #content img {
-  width: 550px;
-  margin-left: 3px;
+  max-width: 700px;
   border: 1px solid rgba(120,120,120,0.2);
 }
 #content #title {
   font-family: 'Simple', 'Courier New';
+  background-color: #ffff00;
+  display: inline-block;
   font-weight: bold;
-  font-size: 17px;
-  margin-bottom: 26px;
+  font-size: 14px;
+  margin: 0 0 26px 5px;
   line-height: inherit;
-  padding: 0 0 0 14px;
+  padding: 6px 7px 1px 7px;
 }
 #content .question {
   font-family: 'Simple', 'Courier New';
@@ -163,9 +173,11 @@ img {
   font-size:11px;
   font-family: 'Courier New';
   position: absolute;
-/*  top: 37px;*/
+  top:-19px; 
+  left:-5px;
   color: #0000ff;
 }
+
 #content .lines .hor{
   margin-bottom: 0px;
   line-height: 9px;
@@ -201,9 +213,27 @@ img {
 
 
 
+#exhbition_imgs {
+  
+}
+
+#exhbition_imgs img{
+  width: 300px;
+}
+
 /*
   PROXIMITIES
 */
+#content .proximity_col {
+  float:left;
+  width:570px;
+  margin-left: 20px; 
+  padding-top:20px;
+}
+#content .proximity_col img{
+  max-width: 550px;
+}
+
 #content .proximity {
   position: relative;
   display: inline-block;
@@ -211,20 +241,36 @@ img {
 /*  padding: 0px 10px 10px 0;*/
 }
 .proximity_content {
-  padding: 0 0 0 15px;
+  padding: 0 0 0 8px;
 }
 #content .proximity_content div.list {
   line-height: 13px;
 }
 #content .proximity_content img {
-  width: inherit;
 }
+.proximity_content div {
+  width: 550px;
+/*  margin-left: 170px;*/
+  margin-bottom: 30px;
+}
+
 .desc div {
 /*  margin-top: 10px;*/
 }
 
 #content #author div {
   margin-bottom: 0px;
+  font-family: 'Simple', 'Courier New';
+}
+
+#content #about_listing {
+  width: 200px;
+  float: left;
+  margin-left: 40px;
+  font-family: 'Simple';
+}
+#content #about_listing div{
+  margin: 0px;
 }
 
 #projects {
@@ -276,7 +322,6 @@ img {
 		top:  0px;
 		left: 100px;
 	}
-
 
 
 

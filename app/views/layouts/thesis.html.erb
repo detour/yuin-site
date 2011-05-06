@@ -15,14 +15,18 @@
 		<div id="main">
 			<div id="menu">
 				<div id="title"><%=link_to 'HIJACKERS', thesis_path %></div>
-				<div class="item"><%=link_to 'ABOUT', thesis_about_path %></div>
-				<div class="item"><%=link_to 'METHODOLOGY', thesis_methodology_path %></div>
-				<div class="item"><%=link_to 'PROXIMITIES', thesis_proximities_path %></div>
+				<div class="item"><%=link_to '/ ABOUT', thesis_about_path %></div>
+				<div class="item"><%=link_to '/ METHODOLOGY', thesis_methodology_path %></div>
+				<div class="item"><%=link_to '/ PROXIMITIES', thesis_proximities_path %></div>
+				<div class="item"><%=link_to '/ EXHIBITION', thesis_exhibition_path %></div>
 				<div class="item" id="missions">
-					<div id="mission_title"><%=link_to 'MISSIONS', thesis_missions_path %></div>
-					<div class="name"><%=link_to '-> PIXEL MONSTER', thesis_monster_path %></div>
-					<div class="name"><%=link_to '-> ANTI-LIKE MAGNET', thesis_magnet_path %></div>
-					<div class="name"><%=link_to '-> THE SEARCH OPERATORS', thesis_search_path %></div>
+					<div id="mission_title">/ MISSIONS</div>
+					<!-- <div id="mission_title"><%=link_to '/ MISSIONS', thesis_missions_path %></div> -->
+					<div id="mission_panel">
+						<div class="name"><%=link_to '-> PIXEL MONSTER', thesis_monster_path %></div>
+						<div class="name"><%=link_to '-> ANTI-LIKE MAGNET', thesis_magnet_path %></div>
+						<div class="name"><%=link_to '-> THE SEARCH OPERATORS', thesis_search_path %></div>
+					</div>
 				</div>
 			</div>
 			
