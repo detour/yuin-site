@@ -111,10 +111,10 @@ img {
   padding: 2px 0 0 0;
 }
 
-#menu #mission_panel {
+/*#menu #mission_panel {
   display: none;
   background-color: #fff;
-}
+}*/
 
 /* 
   CONTENT
@@ -228,7 +228,7 @@ img {
 #content .proximity_col {
   float:left;
   width:570px;
-  margin-left: 20px; 
+  margin-right: 30px; 
   padding-top:20px;
 }
 #content .proximity_col img{
