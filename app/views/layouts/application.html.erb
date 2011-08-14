@@ -7,6 +7,11 @@
     <meta name="google-site-verification" content="oe6n5-QhjpYxq4wpvxvfx7YokyxYWn1dgUq5ZLaCMKI" />
     <meta name="google-site-verification" content="SqhqgbfK6ufJO8JFNAPEDJUlSmjqM8UxNfMi_DtBNCY" />
     
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="http://use.typekit.com/qai1onp.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		
     <%= stylesheet_link_tag 'public', :media => 'all' %>
     
     <!--[if IE 6]>
@@ -29,10 +34,11 @@
         <%- end -%>
           <div id="main_menu">
             <div id="logo" class="menu_item"><a href="<%= home_url %>">.yuin</a></div>
-            <% (params[:controller] == 'thesis') ? classes = 'current' : classes = '' %>
-            <div class="menu_item"><%= link_to "/&nbsp;thesis", thesis_path, :class => classes %></div>
+
             <% (params[:controller] == 'projects' or params[:controller] == 'categories') ? portfolio_class = 'current' : portfolio_class = '' %>
             <div class="menu_item"><%= link_to "/&nbsp;portfolio", projects_path, :class => portfolio_class %></div>
+            <% (params[:controller] == 'thesis') ? classes = 'current' : classes = '' %>
+            <div class="menu_item"><%= link_to "/&nbsp;thesis", thesis_path, :class => classes, :target => '_blank' %></div>
             <% (params[:controller] == 'home' and params[:action] == 'resume') ? classes = 'current' : classes = '' %>
             <div class="menu_item"><%= link_to "/&nbsp;resume", resume_path, :class => classes %></div>
             <% (params[:controller] == 'home' and params[:action] == 'contact') ? classes = 'current' : classes = '' %>
