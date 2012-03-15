@@ -57,7 +57,7 @@ namespace :deploy do
   task :default do
     set :migrate_target, :latest
     update_code
-    migrate
+    # migrate
     symlink
   end
   
